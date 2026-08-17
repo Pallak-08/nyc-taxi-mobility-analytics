@@ -1,0 +1,17 @@
+# Local MySQL instance (regenerate with scripts/load_data.py)
+mysql_data/
+
+# Raw downloaded parquet/shapefile data (regenerate with scripts/download_data.sh)
+raw_data/
+
+# Generated Tableau extracts (regenerate by running the notebook)
+exports/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+*.log
