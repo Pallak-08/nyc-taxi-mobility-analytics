@@ -1,0 +1,1217 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='a2398337830200630ac27670f2a8f4b6bd2bd82dc626d747a1c671307fb67b2a' _.fcp.WorkbookFingerprinting.true...creator-author-id='a2398337830200630ac27670f2a8f4b6bd2bd82dc626d747a1c671307fb67b2a' _.fcp.WorkbookFingerprinting.true...creator-license-type='free' _.fcp.WorkbookFingerprinting.true...creator-machine-id='d7f29bd0adb793c21e9a76a444a303c92ff00a4c43e006ed72ff46b6e48eecb8' _.fcp.WorkbookFingerprinting.true...license-type='free' _.fcp.WorkbookFingerprinting.true...machine-id='d7f29bd0adb793c21e9a76a444a303c92ff00a4c43e006ed72ff46b6e48eecb8' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='tableau_extract.csv (Multiple Connections)' inline='true' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tableau_extract' name='textscan.07yv3pw1wg7z551cwa0iv0tklj26'>
+            <connection class='textscan' directory='/Users/pallakkhullar/Desktop/nyc-taxi-analysis/exports' filename='tableau_extract.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='top_zones_by_revenue' name='textscan.0kfk1mz1fm11xy18po30n0rg2gm7'>
+            <connection class='textscan' directory='/Users/pallakkhullar/Desktop/nyc-taxi-analysis/exports' filename='top_zones_by_revenue.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='top_zones_by_volume' name='textscan.0zntm280fbcbv418d6hok15chb18'>
+            <connection class='textscan' directory='/Users/pallakkhullar/Desktop/nyc-taxi-analysis/exports' filename='top_zones_by_volume.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07yv3pw1wg7z551cwa0iv0tklj26' name='tableau_extract.csv' table='[tableau_extract#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='date' name='pickup_date' ordinal='0' />
+            <column datatype='integer' name='pickup_hour' ordinal='1' />
+            <column datatype='string' name='service_type' ordinal='2' />
+            <column datatype='real' name='payment_type' ordinal='3' />
+            <column datatype='string' name='borough' ordinal='4' />
+            <column datatype='string' name='zone' ordinal='5' />
+            <column datatype='integer' name='trip_count' ordinal='6' />
+            <column datatype='real' name='total_distance' ordinal='7' />
+            <column datatype='real' name='total_duration_min' ordinal='8' />
+            <column datatype='real' name='fare_revenue' ordinal='9' />
+            <column datatype='real' name='tip_revenue' ordinal='10' />
+            <column datatype='real' name='total_revenue' ordinal='11' />
+            <column datatype='real' name='avg_passenger_count' ordinal='12' />
+            <column datatype='string' name='day_name' ordinal='13' />
+            <column datatype='string' name='month_name' ordinal='14' />
+            <column datatype='string' name='payment_label' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[pickup_date]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>pickup_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pickup_hour]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>pickup_hour</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[service_type]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>service_type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_type</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[payment_type]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>payment_type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>borough</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[borough]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>borough</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zone]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>zone</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[trip_count]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>trip_count</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_distance]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>total_distance</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_duration_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_duration_min]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>total_duration_min</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fare_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fare_revenue]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>fare_revenue</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tip_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tip_revenue]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>tip_revenue</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_passenger_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passenger_count]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>avg_passenger_count</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_name]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>day_name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_name]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>month_name</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payment_label]</local-name>
+            <parent-name>[tableau_extract.csv]</parent-name>
+            <remote-alias>payment_label</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Fare' datatype='real' name='[Calculation_0199528075808768]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([total_revenue])/SUM([trip_count])' />
+      </column>
+      <column caption='Avg Tip %' datatype='real' name='[Calculation_0199528075948033]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([tip_revenue])/SUM([fare_revenue])' />
+      </column>
+      <column caption='tableau_extract.csv' datatype='table' name='[__tableau_internal_object_id__].[tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D]' role='measure' type='quantitative' />
+      <column caption='Avg Passenger Count' datatype='real' name='[avg_passenger_count]' role='measure' type='quantitative' />
+      <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+      <column caption='Day Name' datatype='string' name='[day_name]' role='dimension' type='nominal' />
+      <column caption='Fare Revenue' datatype='real' name='[fare_revenue]' role='measure' type='quantitative' />
+      <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+      <column caption='Payment Label' datatype='string' name='[payment_label]' role='dimension' type='nominal' />
+      <column caption='Payment Type' datatype='real' name='[payment_type]' role='measure' type='quantitative' />
+      <column caption='Pickup Date' datatype='date' name='[pickup_date]' role='dimension' type='ordinal' />
+      <column caption='Pickup Hour' datatype='integer' name='[pickup_hour]' role='measure' type='quantitative' />
+      <column caption='Service Type' datatype='string' name='[service_type]' role='dimension' type='nominal' />
+      <column caption='Tip Revenue' datatype='real' name='[tip_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Distance' datatype='real' name='[total_distance]' role='measure' type='quantitative' />
+      <column caption='Total Duration Min' datatype='real' name='[total_duration_min]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column caption='Trip Count' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+      <column caption='Zone' datatype='string' name='[zone]' role='dimension' type='nominal' />
+      <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:borough:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bronx&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;N/A&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Manhattan&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Staten Island&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EWR&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Queens&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='tableau_extract.csv' id='tableau_extract.csv_0EEF18E1C39843F7A6B722976ED5B27D'>
+            <properties context=''>
+              <relation connection='textscan.07yv3pw1wg7z551cwa0iv0tklj26' name='tableau_extract.csv' table='[tableau_extract#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='date' name='pickup_date' ordinal='0' />
+                  <column datatype='integer' name='pickup_hour' ordinal='1' />
+                  <column datatype='string' name='service_type' ordinal='2' />
+                  <column datatype='real' name='payment_type' ordinal='3' />
+                  <column datatype='string' name='borough' ordinal='4' />
+                  <column datatype='string' name='zone' ordinal='5' />
+                  <column datatype='integer' name='trip_count' ordinal='6' />
+                  <column datatype='real' name='total_distance' ordinal='7' />
+                  <column datatype='real' name='total_duration_min' ordinal='8' />
+                  <column datatype='real' name='fare_revenue' ordinal='9' />
+                  <column datatype='real' name='tip_revenue' ordinal='10' />
+                  <column datatype='real' name='total_revenue' ordinal='11' />
+                  <column datatype='real' name='avg_passenger_count' ordinal='12' />
+                  <column datatype='string' name='day_name' ordinal='13' />
+                  <column datatype='string' name='month_name' ordinal='14' />
+                  <column datatype='string' name='payment_label' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Demand Heatmap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Day Name' datatype='string' name='[day_name]' role='dimension' type='nominal' />
+            <column-instance column='[day_name]' derivation='None' name='[none:day_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[pickup_hour]' derivation='None' name='[none:pickup_hour:ok]' pivot='key' type='ordinal' />
+            <column caption='Pickup Hour' datatype='integer' name='[pickup_hour]' role='measure' type='quantitative' />
+            <column-instance column='[trip_count]' derivation='Sum' name='[sum:trip_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Trip Count' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:day_name:nk]</rows>
+        <cols>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:pickup_hour:ok]</cols>
+      </table>
+      <simple-id uuid='{97A47943-D7E8-4493-8E86-342CB75487F8}' />
+    </worksheet>
+    <worksheet name='KPI - Avg Fare'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Avg Fare' datatype='real' name='[Calculation_0199528075808768]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([total_revenue])/SUM([trip_count])' />
+            </column>
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column caption='Trip Count' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0199528075808768]' derivation='User' name='[usr:Calculation_0199528075808768:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[usr:Calculation_0199528075808768:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{49F985BA-50D2-490C-81DB-3ED6FCE2223C}' />
+    </worksheet>
+    <worksheet name='KPI - Total Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:total_revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3EEFA8AD-6F3B-4FF3-9F63-B7B73B14EA68}' />
+    </worksheet>
+    <worksheet name='KPI - Total Trips'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column-instance column='[trip_count]' derivation='Sum' name='[sum:trip_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Trip Count' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{53F464ED-A032-49A5-AA68-D588F578E19E}' />
+    </worksheet>
+    <worksheet name='Monthly Revenue Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+            <column-instance column='[month_name]' derivation='None' name='[none:month_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:total_revenue:qk]</rows>
+        <cols>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:month_name:nk]</cols>
+      </table>
+      <simple-id uuid='{C668C4DF-EA48-4D7D-BD13-292F251E80BE}' />
+    </worksheet>
+    <worksheet name='Payment and Tip Behavior'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Avg Tip %' datatype='real' name='[Calculation_0199528075948033]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([tip_revenue])/SUM([fare_revenue])' />
+            </column>
+            <column caption='Fare Revenue' datatype='real' name='[fare_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[payment_label]' derivation='None' name='[none:payment_label:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Label' datatype='string' name='[payment_label]' role='dimension' type='nominal' />
+            <column caption='Tip Revenue' datatype='real' name='[tip_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0199528075948033]' derivation='User' name='[usr:Calculation_0199528075948033:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:payment_label:nk]</rows>
+        <cols>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[usr:Calculation_0199528075948033:qk]</cols>
+      </table>
+      <simple-id uuid='{7E6B14AA-D4E0-4EAC-92CF-018BD94F6452}' />
+    </worksheet>
+    <worksheet name='Revenue by Pickup Zone'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+            <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
+            <column-instance column='[zone]' derivation='None' name='[none:zone:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column caption='Zone' datatype='string' name='[zone]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]'>
+            <groupfilter count='15' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([total_revenue])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:zone:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:total_revenue:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]</rows>
+        <cols>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:total_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{6CEA117F-33DF-46BB-85CE-6E113DFC44DD}' />
+    </worksheet>
+    <worksheet name='Trip Volume by Pickup Zone'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_extract.csv (Multiple Connections)' name='federated.1ifaj7z114v0by1d0yz9h1g8inuj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifaj7z114v0by1d0yz9h1g8inuj'>
+            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+            <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
+            <column-instance column='[zone]' derivation='None' name='[none:zone:nk]' pivot='key' type='nominal' />
+            <column-instance column='[trip_count]' derivation='Sum' name='[sum:trip_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Trip Count' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+            <column caption='Zone' datatype='string' name='[zone]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]'>
+            <groupfilter count='15' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([trip_count])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:zone:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;JFK Airport&quot;</bucket>
+              <bucket>&quot;Upper East Side South&quot;</bucket>
+              <bucket>&quot;Midtown Center&quot;</bucket>
+              <bucket>&quot;Upper East Side North&quot;</bucket>
+              <bucket>&quot;Midtown East&quot;</bucket>
+              <bucket>&quot;LaGuardia Airport&quot;</bucket>
+              <bucket>&quot;Penn Station/Madison Sq West&quot;</bucket>
+              <bucket>&quot;Times Sq/Theatre District&quot;</bucket>
+              <bucket>&quot;Lincoln Square East&quot;</bucket>
+              <bucket>&quot;Murray Hill&quot;</bucket>
+              <bucket>&quot;Midtown North&quot;</bucket>
+              <bucket>&quot;Upper West Side South&quot;</bucket>
+              <bucket>&quot;Union Sq&quot;</bucket>
+              <bucket>&quot;Clinton East&quot;</bucket>
+              <bucket>&quot;East Chelsea&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:zone:nk]</rows>
+        <cols>[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]</cols>
+      </table>
+      <simple-id uuid='{E3CBFEC7-4B2A-42E5-8C0D-66A21473F291}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>NYC Taxi Mobility Dashboard — Demand, Revenue &amp; Operational Efficiency</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1000' maxwidth='1400' minheight='1000' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='63400' id='13' param='horz' type-v2='layout-flow' w='98858' x='571' y='800'>
+            <zone h='63400' id='5' param='vert' type-v2='layout-flow' w='87358' x='571' y='800'>
+              <zone h='4200' id='7' type-v2='title' w='87358' x='571' y='800'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='59200' id='6' type-v2='layout-basic' w='87358' x='571' y='5000'>
+                <zone h='12800' id='8' name='KPI - Total Trips' w='87358' x='571' y='29800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='12500' id='9' name='KPI - Total Revenue' w='87358' x='571' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='12300' id='10' name='KPI - Avg Fare' w='87358' x='571' y='17500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='21600' id='11' name='Demand Heatmap' w='87358' x='571' y='42600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='161' h='63400' id='12' is-fixed='true' param='vert' type-v2='layout-flow' w='11500' x='87929' y='800'>
+              <zone h='6500' id='14' name='Demand Heatmap' pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]' type-v2='color' w='11500' x='87929' y='800'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6600' id='16' name='Revenue by Pickup Zone' pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' type-v2='color' w='11500' x='87929' y='7300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='10342' id='15' name='Revenue by Pickup Zone' w='98858' x='571' y='64200'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='12329' id='19' name='Trip Volume by Pickup Zone' w='98858' x='571' y='74542'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='6164' id='20' name='Monthly Revenue Trend' w='98858' x='571' y='86871'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='6165' id='21' name='Payment and Tip Behavior' w='98858' x='571' y='93035'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>NYC Taxi Mobility Dashboard — Demand, Revenue &amp; Operational Efficiency</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='26' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone h='4200' id='7' type-v2='title' w='87358' x='571' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='117' h='12500' id='9' is-fixed='true' name='KPI - Total Revenue' w='87358' x='571' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='115' h='12300' id='10' is-fixed='true' name='KPI - Avg Fare' w='87358' x='571' y='17500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='120' h='12800' id='8' is-fixed='true' name='KPI - Total Trips' w='87358' x='571' y='29800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='208' h='21600' id='11' is-fixed='true' name='Demand Heatmap' w='87358' x='571' y='42600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='14' name='Demand Heatmap' pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]' type-v2='color' w='11500' x='87929' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='95' h='10342' id='15' is-fixed='true' name='Revenue by Pickup Zone' w='98858' x='571' y='64200'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6600' id='16' name='Revenue by Pickup Zone' pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' type-v2='color' w='11500' x='87929' y='7300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='116' h='12329' id='19' is-fixed='true' name='Trip Volume by Pickup Zone' w='98858' x='571' y='74542'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='53' h='6164' id='20' is-fixed='true' name='Monthly Revenue Trend' w='98858' x='571' y='86871'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='54' h='6165' id='21' is-fixed='true' name='Payment and Tip Behavior' w='98858' x='571' y='93035'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{383118DA-463F-4A5C-B2A5-D43C7FB18F3C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='KPI - Total Trips'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F9597EA2-839D-455C-99B8-439FF6F2D6DA}' />
+    </window>
+    <window class='worksheet' name='KPI - Total Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7177A63F-5071-4D04-8442-296E0B07B35D}' />
+    </window>
+    <window class='worksheet' name='KPI - Avg Fare'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BB5D52DE-96B6-45DE-A0FA-FB68BC01ABF4}' />
+    </window>
+    <window class='worksheet' name='Demand Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[sum:trip_count:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EE144ED7-5756-41D9-ACCB-67B6E79E253E}' />
+    </window>
+    <window class='worksheet' name='Revenue by Pickup Zone'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5AB136ED-2B6D-47BA-B43D-69827D4C1680}' />
+    </window>
+    <window class='worksheet' name='Trip Volume by Pickup Zone'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ifaj7z114v0by1d0yz9h1g8inuj].[none:borough:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3339C9D5-B528-4874-AE84-195A6CD6FCC9}' />
+    </window>
+    <window class='worksheet' name='Monthly Revenue Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7995F88C-F1A9-4625-83B8-30EB122A093D}' />
+    </window>
+    <window class='worksheet' name='Payment and Tip Behavior'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4B6B7E48-9CC1-49C6-8F28-2BBD2E96E9FC}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Demand Heatmap' />
+        <viewpoint name='KPI - Avg Fare' />
+        <viewpoint name='KPI - Total Revenue' />
+        <viewpoint name='KPI - Total Trips' />
+        <viewpoint name='Monthly Revenue Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Payment and Tip Behavior' />
+        <viewpoint name='Revenue by Pickup Zone' />
+        <viewpoint name='Trip Volume by Pickup Zone' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{44337FCD-3227-4070-B08A-7CA7DD6F916F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='48' name='KPI - Total Trips' width='168'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

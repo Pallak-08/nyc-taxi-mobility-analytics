@@ -25,8 +25,11 @@ exact filters applied at ingestion — corrupt dates, negative distances, and ot
   ranking, joins against the taxi zone lookup) happens here rather than in pandas.
 - **Python** (pandas, matplotlib, seaborn) — EDA notebook that queries MySQL directly, with a 1M-row
   random sample pulled for correlation/outlier/distribution work that needs row-level data.
-- **Tableau** — business-facing dashboard, built from the pre-aggregated CSV extracts the notebook
-  generates. *(In progress — dashboard link to be added here.)*
+- **Dashboard** — business-facing summary view built from the same aggregates (see below).
+
+## Dashboard
+
+![NYC Taxi Mobility Dashboard](tableau/nyc_taxi_dashboard.png)
 
 ## Repo structure
 

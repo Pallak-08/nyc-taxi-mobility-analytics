@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+body { background:#F3F2F1; font-family:'Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif; color:#201F1E; width:1560px; }
+.topbar { background:#FFFFFF; border-bottom:1px solid #E1E1E1; padding:18px 32px; display:flex; justify-content:space-between; align-items:center; }
+.topbar h1 { font-size:20px; font-weight:600; }
+.topbar p { color:#605E5C; font-size:12px; margin-top:2px; }
+.pill { background:#F3F2F1; border:1px solid #E1E1E1; border-radius:4px; padding:6px 14px; font-size:12px; color:#605E5C; font-weight:600; }
+.content { padding:24px 32px 32px; }
+.grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin-bottom:16px; }
+.kpi-card { background:#FFFFFF; border:1px solid #E1E1E1; border-radius:4px; padding:18px 20px; position:relative; overflow:hidden; }
+.kpi-accent { position:absolute; top:0; left:0; width:100%; height:3px; background:#2568EF; }
+.kpi-label { font-size:11px; color:#605E5C; font-weight:600; letter-spacing:0.6px; margin-bottom:8px; }
+.kpi-value { font-size:28px; font-weight:600; color:#201F1E; }
+.card { background:#FFFFFF; border:1px solid #E1E1E1; border-radius:4px; padding:20px 22px; }
+.card h3 { font-size:13px; font-weight:600; color:#201F1E; margin-bottom:16px; text-transform:uppercase; letter-spacing:0.4px; }
+.row2 { display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-bottom:16px; }
+.row3 { display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:16px; }
+.hrow { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+.hday { width:32px; font-size:11px; color:#605E5C; font-weight:600; }
+.hcells { display:flex; gap:3px; flex:1; }
+.hcell { flex:1; height:18px; border-radius:2px; }
+.hourlabels { display:flex; justify-content:space-between; margin-left:40px; font-size:10px; color:#605E5C; margin-top:6px; }
+.barrow { display:flex; align-items:center; gap:10px; margin-bottom:11px; }
+.barlabel { width:150px; font-size:12px; color:#201F1E; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.bartrack { flex:1; background:#F3F2F1; border-radius:3px; height:12px; overflow:hidden; }
+.barfill { height:100%; border-radius:3px; }
+.barval { width:66px; font-size:11px; color:#605E5C; text-align:right; font-weight:600; }
+.monthlabels { display:flex; justify-content:space-between; font-size:10px; color:#605E5C; margin-top:6px; padding:0 26px; }
+.legend-item { font-size:13px; color:#201F1E; margin-top:14px; display:flex; align-items:center; gap:8px; }
+.dot { width:10px; height:10px; border-radius:2px; display:inline-block; }
+.donut-wrap { display:flex; align-items:center; gap:20px; }
+.footer { color:#605E5C; font-size:11px; margin-top:20px; text-align:center; }
+</style></head>
+<body>
+<div class="topbar">
+  <div>
+    <h1>NYC Taxi Mobility Dashboard</h1>
+    <p>Demand, Revenue &amp; Operational Efficiency &nbsp;·&nbsp; Yellow + Green Taxi</p>
+  </div>
+  <div class="pill">FULL YEAR 2023</div>
+</div>
+
+<div class="content">
+<div class="grid">
+<div class="kpi-card">
+  <div class="kpi-accent"></div>
+  <div class="kpi-label">TOTAL TRIPS</div>
+  <div class="kpi-value">39.1M</div>
+</div>
+<div class="kpi-card">
+  <div class="kpi-accent"></div>
+  <div class="kpi-label">TOTAL REVENUE</div>
+  <div class="kpi-value">$1.11B</div>
+</div>
+<div class="kpi-card">
+  <div class="kpi-accent"></div>
+  <div class="kpi-label">AVERAGE FARE</div>
+  <div class="kpi-value">$28.36</div>
+</div>
+<div class="kpi-card">
+  <div class="kpi-accent"></div>
+  <div class="kpi-label">TOTAL TIPS</div>
+  <div class="kpi-value">$136.8M</div>
+</div></div>
+
+<div class="card" style="margin-bottom:16px">
+  <h3>Demand Concentration — Day of Week × Hour</h3>
+  <div class="hrow"><span class="hday">Sun</span><div class="hcells"><div class="hcell" style="background:rgb(98,128,192)"></div><div class="hcell" style="background:rgb(120,145,201)"></div><div class="hcell" style="background:rgb(150,170,214)"></div><div class="hcell" style="background:rgb(175,191,225)"></div><div class="hcell" style="background:rgb(200,211,236)"></div><div class="hcell" style="background:rgb(218,226,243)"></div><div class="hcell" style="background:rgb(212,220,241)"></div><div class="hcell" style="background:rgb(201,212,236)"></div><div class="hcell" style="background:rgb(186,199,229)"></div><div class="hcell" style="background:rgb(158,176,218)"></div><div class="hcell" style="background:rgb(129,153,205)"></div><div class="hcell" style="background:rgb(111,138,197)"></div><div class="hcell" style="background:rgb(94,124,190)"></div><div class="hcell" style="background:rgb(89,120,188)"></div><div class="hcell" style="background:rgb(84,116,186)"></div><div class="hcell" style="background:rgb(87,118,187)"></div><div class="hcell" style="background:rgb(86,117,187)"></div><div class="hcell" style="background:rgb(86,118,187)"></div><div class="hcell" style="background:rgb(91,122,189)"></div><div class="hcell" style="background:rgb(109,136,196)"></div><div class="hcell" style="background:rgb(117,143,200)"></div><div class="hcell" style="background:rgb(125,149,203)"></div><div class="hcell" style="background:rgb(142,164,211)"></div><div class="hcell" style="background:rgb(165,182,221)"></div></div></div><div class="hrow"><span class="hday">Mon</span><div class="hcells"><div class="hcell" style="background:rgb(193,205,233)"></div><div class="hcell" style="background:rgb(212,221,241)"></div><div class="hcell" style="background:rgb(222,229,245)"></div><div class="hcell" style="background:rgb(225,231,246)"></div><div class="hcell" style="background:rgb(224,230,246)"></div><div class="hcell" style="background:rgb(216,224,243)"></div><div class="hcell" style="background:rgb(191,204,232)"></div><div class="hcell" style="background:rgb(152,172,215)"></div><div class="hcell" style="background:rgb(125,150,204)"></div><div class="hcell" style="background:rgb(119,145,201)"></div><div class="hcell" style="background:rgb(116,142,200)"></div><div class="hcell" style="background:rgb(110,137,197)"></div><div class="hcell" style="background:rgb(101,130,193)"></div><div class="hcell" style="background:rgb(95,125,191)"></div><div class="hcell" style="background:rgb(83,115,186)"></div><div class="hcell" style="background:rgb(77,111,183)"></div><div class="hcell" style="background:rgb(78,111,183)"></div><div class="hcell" style="background:rgb(65,100,178)"></div><div class="hcell" style="background:rgb(61,97,176)"></div><div class="hcell" style="background:rgb(87,119,187)"></div><div class="hcell" style="background:rgb(101,130,193)"></div><div class="hcell" style="background:rgb(107,135,196)"></div><div class="hcell" style="background:rgb(132,155,207)"></div><div class="hcell" style="background:rgb(166,183,221)"></div></div></div><div class="hrow"><span class="hday">Tue</span><div class="hcells"><div class="hcell" style="background:rgb(197,208,234)"></div><div class="hcell" style="background:rgb(216,224,242)"></div><div class="hcell" style="background:rgb(224,230,246)"></div><div class="hcell" style="background:rgb(227,233,247)"></div><div class="hcell" style="background:rgb(226,232,247)"></div><div class="hcell" style="background:rgb(217,224,243)"></div><div class="hcell" style="background:rgb(188,201,231)"></div><div class="hcell" style="background:rgb(138,160,209)"></div><div class="hcell" style="background:rgb(104,132,194)"></div><div class="hcell" style="background:rgb(98,127,192)"></div><div class="hcell" style="background:rgb(99,128,192)"></div><div class="hcell" style="background:rgb(93,124,190)"></div><div class="hcell" style="background:rgb(85,117,187)"></div><div class="hcell" style="background:rgb(82,115,185)"></div><div class="hcell" style="background:rgb(67,102,179)"></div><div class="hcell" style="background:rgb(62,98,177)"></div><div class="hcell" style="background:rgb(62,98,177)"></div><div class="hcell" style="background:rgb(44,83,169)"></div><div class="hcell" style="background:rgb(31,72,163)"></div><div class="hcell" style="background:rgb(60,96,176)"></div><div class="hcell" style="background:rgb(72,106,181)"></div><div class="hcell" style="background:rgb(69,103,179)"></div><div class="hcell" style="background:rgb(94,124,190)"></div><div class="hcell" style="background:rgb(140,162,210)"></div></div></div><div class="hrow"><span class="hday">Wed</span><div class="hcells"><div class="hcell" style="background:rgb(185,199,229)"></div><div class="hcell" style="background:rgb(211,220,240)"></div><div class="hcell" style="background:rgb(221,228,245)"></div><div class="hcell" style="background:rgb(225,231,246)"></div><div class="hcell" style="background:rgb(224,231,246)"></div><div class="hcell" style="background:rgb(216,224,243)"></div><div class="hcell" style="background:rgb(188,201,230)"></div><div class="hcell" style="background:rgb(136,158,208)"></div><div class="hcell" style="background:rgb(100,129,193)"></div><div class="hcell" style="background:rgb(95,125,191)"></div><div class="hcell" style="background:rgb(95,125,191)"></div><div class="hcell" style="background:rgb(88,119,188)"></div><div class="hcell" style="background:rgb(78,111,183)"></div><div class="hcell" style="background:rgb(74,108,182)"></div><div class="hcell" style="background:rgb(62,98,177)"></div><div class="hcell" style="background:rgb(58,95,175)"></div><div class="hcell" style="background:rgb(58,95,175)"></div><div class="hcell" style="background:rgb(36,77,165)"></div><div class="hcell" style="background:rgb(21,64,159)"></div><div class="hcell" style="background:rgb(43,83,169)"></div><div class="hcell" style="background:rgb(60,96,176)"></div><div class="hcell" style="background:rgb(56,93,174)"></div><div class="hcell" style="background:rgb(75,109,182)"></div><div class="hcell" style="background:rgb(127,151,204)"></div></div></div><div class="hrow"><span class="hday">Thu</span><div class="hcells"><div class="hcell" style="background:rgb(175,190,225)"></div><div class="hcell" style="background:rgb(204,214,237)"></div><div class="hcell" style="background:rgb(217,225,243)"></div><div class="hcell" style="background:rgb(223,229,245)"></div><div class="hcell" style="background:rgb(223,230,245)"></div><div class="hcell" style="background:rgb(216,224,242)"></div><div class="hcell" style="background:rgb(187,200,230)"></div><div class="hcell" style="background:rgb(136,159,208)"></div><div class="hcell" style="background:rgb(101,130,193)"></div><div class="hcell" style="background:rgb(96,126,191)"></div><div class="hcell" style="background:rgb(95,125,190)"></div><div class="hcell" style="background:rgb(87,118,187)"></div><div class="hcell" style="background:rgb(77,110,183)"></div><div class="hcell" style="background:rgb(75,109,182)"></div><div class="hcell" style="background:rgb(61,97,176)"></div><div class="hcell" style="background:rgb(54,91,173)"></div><div class="hcell" style="background:rgb(55,92,173)"></div><div class="hcell" style="background:rgb(33,75,164)"></div><div class="hcell" style="background:rgb(18,62,158)"></div><div class="hcell" style="background:rgb(45,84,169)"></div><div class="hcell" style="background:rgb(60,96,176)"></div><div class="hcell" style="background:rgb(56,93,174)"></div><div class="hcell" style="background:rgb(69,103,179)"></div><div class="hcell" style="background:rgb(105,133,195)"></div></div></div><div class="hrow"><span class="hday">Fri</span><div class="hcells"><div class="hcell" style="background:rgb(151,171,215)"></div><div class="hcell" style="background:rgb(186,199,230)"></div><div class="hcell" style="background:rgb(206,215,238)"></div><div class="hcell" style="background:rgb(216,224,243)"></div><div class="hcell" style="background:rgb(219,227,244)"></div><div class="hcell" style="background:rgb(215,223,242)"></div><div class="hcell" style="background:rgb(192,205,232)"></div><div class="hcell" style="background:rgb(155,174,216)"></div><div class="hcell" style="background:rgb(129,153,205)"></div><div class="hcell" style="background:rgb(117,143,200)"></div><div class="hcell" style="background:rgb(109,136,197)"></div><div class="hcell" style="background:rgb(100,129,193)"></div><div class="hcell" style="background:rgb(91,122,189)"></div><div class="hcell" style="background:rgb(84,116,186)"></div><div class="hcell" style="background:rgb(66,101,178)"></div><div class="hcell" style="background:rgb(61,97,176)"></div><div class="hcell" style="background:rgb(64,99,177)"></div><div class="hcell" style="background:rgb(44,84,169)"></div><div class="hcell" style="background:rgb(33,74,164)"></div><div class="hcell" style="background:rgb(48,86,171)"></div><div class="hcell" style="background:rgb(83,115,185)"></div><div class="hcell" style="background:rgb(84,116,186)"></div><div class="hcell" style="background:rgb(75,108,182)"></div><div class="hcell" style="background:rgb(82,115,185)"></div></div></div><div class="hrow"><span class="hday">Sat</span><div class="hcells"><div class="hcell" style="background:rgb(104,132,194)"></div><div class="hcell" style="background:rgb(127,151,204)"></div><div class="hcell" style="background:rgb(155,174,216)"></div><div class="hcell" style="background:rgb(182,196,228)"></div><div class="hcell" style="background:rgb(206,216,238)"></div><div class="hcell" style="background:rgb(220,227,244)"></div><div class="hcell" style="background:rgb(211,220,240)"></div><div class="hcell" style="background:rgb(199,210,235)"></div><div class="hcell" style="background:rgb(178,193,226)"></div><div class="hcell" style="background:rgb(149,169,214)"></div><div class="hcell" style="background:rgb(123,148,202)"></div><div class="hcell" style="background:rgb(103,131,194)"></div><div class="hcell" style="background:rgb(87,119,187)"></div><div class="hcell" style="background:rgb(81,113,184)"></div><div class="hcell" style="background:rgb(80,113,184)"></div><div class="hcell" style="background:rgb(73,107,181)"></div><div class="hcell" style="background:rgb(69,104,180)"></div><div class="hcell" style="background:rgb(63,99,177)"></div><div class="hcell" style="background:rgb(60,96,176)"></div><div class="hcell" style="background:rgb(64,99,177)"></div><div class="hcell" style="background:rgb(93,123,190)"></div><div class="hcell" style="background:rgb(92,123,190)"></div><div class="hcell" style="background:rgb(80,112,184)"></div><div class="hcell" style="background:rgb(80,113,184)"></div></div></div>
+  <div class="hourlabels"><span>0</span><span>3</span><span>6</span><span>9</span><span>12</span><span>15</span><span>18</span><span>21</span></div>
+</div>
+
+<div class="row2">
+  <div class="card"><h3>Revenue by Pickup Zone</h3><div class="barrow">
+          <span class="barlabel">JFK Airport</span>
+          <div class="bartrack"><div class="barfill" style="width:100.0%;background:#123E9E"></div></div>
+          <span class="barval">$155.7M</span>
+        </div><div class="barrow">
+          <span class="barlabel">LaGuardia Airport</span>
+          <div class="bartrack"><div class="barfill" style="width:55.2%;background:#2568EF"></div></div>
+          <span class="barval">$85.9M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Midtown Center</span>
+          <div class="bartrack"><div class="barfill" style="width:28.3%;background:#2568EF"></div></div>
+          <span class="barval">$44.1M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Upper East Side South</span>
+          <div class="bartrack"><div class="barfill" style="width:23.5%;background:#2568EF"></div></div>
+          <span class="barval">$36.6M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Times Sq/Theatre District</span>
+          <div class="bartrack"><div class="barfill" style="width:23.1%;background:#2568EF"></div></div>
+          <span class="barval">$36.0M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Upper East Side North</span>
+          <div class="bartrack"><div class="barfill" style="width:21.7%;background:#2568EF"></div></div>
+          <span class="barval">$33.8M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Midtown East</span>
+          <div class="bartrack"><div class="barfill" style="width:21.0%;background:#2568EF"></div></div>
+          <span class="barval">$32.7M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Penn Station/Madison Sq West</span>
+          <div class="bartrack"><div class="barfill" style="width:20.9%;background:#2568EF"></div></div>
+          <span class="barval">$32.6M</span>
+        </div></div>
+  <div class="card"><h3>Trip Volume by Pickup Zone</h3><div class="barrow">
+          <span class="barlabel">JFK Airport</span>
+          <div class="bartrack"><div class="barfill" style="width:100.0%;background:#123E9E"></div></div>
+          <span class="barval">2.0M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Upper East Side South</span>
+          <div class="bartrack"><div class="barfill" style="width:89.9%;background:#2568EF"></div></div>
+          <span class="barval">1.8M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Midtown Center</span>
+          <div class="bartrack"><div class="barfill" style="width:88.6%;background:#2568EF"></div></div>
+          <span class="barval">1.8M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Upper East Side North</span>
+          <div class="bartrack"><div class="barfill" style="width:80.4%;background:#2568EF"></div></div>
+          <span class="barval">1.6M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Midtown East</span>
+          <div class="bartrack"><div class="barfill" style="width:68.0%;background:#2568EF"></div></div>
+          <span class="barval">1.4M</span>
+        </div><div class="barrow">
+          <span class="barlabel">LaGuardia Airport</span>
+          <div class="bartrack"><div class="barfill" style="width:65.5%;background:#2568EF"></div></div>
+          <span class="barval">1.3M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Penn Station/Madison Sq West</span>
+          <div class="bartrack"><div class="barfill" style="width:65.5%;background:#2568EF"></div></div>
+          <span class="barval">1.3M</span>
+        </div><div class="barrow">
+          <span class="barlabel">Times Sq/Theatre District</span>
+          <div class="bartrack"><div class="barfill" style="width:63.8%;background:#2568EF"></div></div>
+          <span class="barval">1.3M</span>
+        </div></div>
+</div>
+
+<div class="row3">
+  <div class="card">
+    <h3>Monthly Revenue Trend</h3>
+    <svg class="linechart" viewBox="0 0 460 160" width="100%">
+      <polygon points="26.0,114.0 63.1,134.0 100.2,61.8 137.3,69.6 174.4,30.3 211.5,56.9 248.5,113.1 285.6,122.6 322.7,106.0 359.8,26.0 396.9,56.9 434.0,54.3 434.0,134 26.0,134" fill="#2568EF15"/>
+      <polyline points="26.0,114.0 63.1,134.0 100.2,61.8 137.3,69.6 174.4,30.3 211.5,56.9 248.5,113.1 285.6,122.6 322.7,106.0 359.8,26.0 396.9,56.9 434.0,54.3" fill="none" stroke="#2568EF" stroke-width="2.5"/>
+      <circle cx="26.0" cy="114.0" r="3.5" fill="#123E9E"/><circle cx="63.1" cy="134.0" r="3.5" fill="#123E9E"/><circle cx="100.2" cy="61.8" r="3.5" fill="#123E9E"/><circle cx="137.3" cy="69.6" r="3.5" fill="#123E9E"/><circle cx="174.4" cy="30.3" r="3.5" fill="#123E9E"/><circle cx="211.5" cy="56.9" r="3.5" fill="#123E9E"/><circle cx="248.5" cy="113.1" r="3.5" fill="#123E9E"/><circle cx="285.6" cy="122.6" r="3.5" fill="#123E9E"/><circle cx="322.7" cy="106.0" r="3.5" fill="#123E9E"/><circle cx="359.8" cy="26.0" r="3.5" fill="#123E9E"/><circle cx="396.9" cy="56.9" r="3.5" fill="#123E9E"/><circle cx="434.0" cy="54.3" r="3.5" fill="#123E9E"/>
+    </svg>
+    <div class="monthlabels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+  </div>
+  <div class="card"><h3>Avg Tip % by Payment Type</h3><div class="barrow">
+          <span class="barlabel">Credit card</span>
+          <div class="bartrack"><div class="barfill" style="width:100.0%;background:#123E9E"></div></div>
+          <span class="barval">22.1%</span>
+        </div><div class="barrow">
+          <span class="barlabel">Cash</span>
+          <div class="bartrack"><div class="barfill" style="width:0.0%;background:#2568EF"></div></div>
+          <span class="barval">0.0%</span>
+        </div><div class="barrow">
+          <span class="barlabel">Other</span>
+          <div class="bartrack"><div class="barfill" style="width:56.0%;background:#2568EF"></div></div>
+          <span class="barval">12.4%</span>
+        </div><div class="barrow">
+          <span class="barlabel">Dispute</span>
+          <div class="bartrack"><div class="barfill" style="width:10.1%;background:#2568EF"></div></div>
+          <span class="barval">2.2%</span>
+        </div><div class="barrow">
+          <span class="barlabel">No charge</span>
+          <div class="bartrack"><div class="barfill" style="width:0.7%;background:#2568EF"></div></div>
+          <span class="barval">0.2%</span>
+        </div></div>
+  <div class="card">
+    <h3>Service Type Split</h3>
+    <div class="donut-wrap">
+      <svg width="160" height="160" viewBox="0 0 160 160"><circle r="55" cx="80" cy="80" fill="transparent" stroke="#2568EF" stroke-width="22" stroke-dasharray="7.0 345.6" stroke-dashoffset="0.0" transform="rotate(-90 80 80)"/><circle r="55" cx="80" cy="80" fill="transparent" stroke="#00B7C3" stroke-width="22" stroke-dasharray="338.6 345.6" stroke-dashoffset="-7.0" transform="rotate(-90 80 80)"/></svg>
+      <div><div class="legend-item"><span class="dot" style="background:#2568EF"></span>Green &nbsp;<b>2.0%</b></div><div class="legend-item"><span class="dot" style="background:#00B7C3"></span>Yellow &nbsp;<b>98.0%</b></div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body></html>
